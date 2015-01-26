@@ -1,0 +1,17 @@
+
+@import "bootstrap";
+
+/* fikser bredden på top-nav */
+.form-control {
+	width: 200px
+}
+
+.youtubeitem {
+	margin-left: -30px
+}
+/* move submit youtube url button */
+button.btn.btn-default{
+	position: relative;
+top: -39px;
+left: 238px;
+}
