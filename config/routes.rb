@@ -6,11 +6,14 @@ Rails.application.routes.draw do
   get 'home/index'
 
   get 'users/new'
-  get 'login' => 'sessions#new'
-  post 'login' => 'sessions#create'
-  delete 'logout' => 'sessions#destroy'
+  match 'logout', to: 'sessions#destroy', via: :get
+  match 'login', to: 'sessions#new', via: :get
+  match 'login', to: 'sessions#create', via: :post
 
   resources :users
+  resources :youtubelists, only:[:index, :create, :new, :edit, :show, :update] do
+    get 'delete'
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

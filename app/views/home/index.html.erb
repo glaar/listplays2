@@ -1,6 +1,15 @@
 <div class="row">
   <div class="col-md-4">
+    <% if logged_in? %>
+      <h3>Logged in as: </h3>
+
+      <% gravatar_id = Digest::MD5::hexdigest(current_user.email.downcase) %>
+      <% gravatar_url = "https://secure.gravatar.com/avatar/#{gravatar_id}" %>
+      <%= link_to image_tag(gravatar_url), current_user %>
+    <%end%>
+
     <h3>New Users</h3>
+    <%= render 'user_gravatars' %>
   </div>
   <div class="col-md-offset-1 col-md-5">
     <h2> Welcome! </h2>
