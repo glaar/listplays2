@@ -1,4 +1,4 @@
-<div class="col-md-5" style="margin-left: -30px">
+<div class="col-md-5">
   <h3>  
     <%= gravatar_for @user %>
     <%= @user.name %>
@@ -24,12 +24,10 @@
 
 <div class="col-md-6">
 
-  <ul class="nav nav-tabs">
-   <li role="presentation" class="active"><a href="#">Home</a></li>
-    <li role="presentation"><a href="#">Profile</a></li>
-     <li role="presentation"><a href="#">Messages</a></li>
-     <li role="presentation"><a href="#">Messages</a></li>
-     <li role="presentation"><a href="#">Messages</a></li>
+  <ul class="nav nav-tabs" style="border-bottom: 1px solid #FFFFFF;">
+   <li role="presentation"><a href="#">Random</a></li>
+    <li role="presentation"><a href="#">Music</a></li>
+     <li role="presentation"><a href="#">Tutorials</a></li>
    </ul>
    <%= render 'site/youtubelist'%>
 </div>
