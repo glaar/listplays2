@@ -1,0 +1,9 @@
+<ul class="nav nav-tabs" style="border-bottom: 1px solid #FFFFFF;">
+  <% categories = Array.new %>
+  <% @youtubelist.each do |youtube| %>
+    <% unless categories.include?(youtube.category)%>
+      <% categories << youtube.category %>
+      <li role="presentation"><a href="javascript:toggleByClass('<%=youtube.category%>');"><%=youtube.category%></a></li>
+    <%end%>
+  <%end%>
+</ul>
