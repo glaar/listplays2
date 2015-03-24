@@ -1,6 +1,5 @@
 <% @youtubelist.group_by(&:category).each do |category, youtubelist| %>
   <div class="category" id="<%= category.try(:parameterize) %>">
-    <h3><%= category.try(:parameterize) || "No category set" %></h3>
     <% youtubelist.each do |youtubelist| %>
       <div class="youtubeitem"> 
         <iframe width="320" height="195" src="//www.youtube.com/embed/<%= youtubelist.url.html_safe %>" frameborder="0" allowfullscreen>f</iframe>
