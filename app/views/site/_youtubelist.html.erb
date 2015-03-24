@@ -2,7 +2,7 @@
   <div class="category" id="<%= category.try(:parameterize) %>">
     <% youtubelist.each do |youtubelist| %>
       <div class="youtubeitem"> 
-        <iframe width="320" height="195" src="//www.youtube.com/embed/<%= youtubelist.url.html_safe %>" frameborder="0" allowfullscreen>f</iframe>
+        <iframe width="310" height="195" src="//www.youtube.com/embed/<%= youtubelist.url.html_safe %>" frameborder="0" allowfullscreen>f</iframe>
         <br/>
         <% if logged_in? && current_user == @user %>
           <%= link_to "Delete", youtubelist_delete_path(youtubelist), class: 'btn btn-default btn-xs' %>
