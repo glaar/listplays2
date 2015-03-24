@@ -1,11 +1,14 @@
-<% @youtubelist.each do |youtubelist| %>
-  <div class="youtubeitem"> 
-
-    <iframe width="320" height="195" src="//www.youtube.com/embed/<%= youtubelist.url.html_safe %>" frameborder="0" allowfullscreen>f</iframe>
-    <br/>
-    <% if logged_in? && current_user == @user %>
-      <%= link_to "Delete", youtubelist_delete_path(youtubelist), class: 'btn btn-default btn-xs' %>
-
+<% @youtubelist.group_by(&:category).each do |category, youtubelist| %>
+  <div class="category" id="<%= category.try(:parameterize) %>">
+    <h3><%= category.try(:parameterize) || "No category set" %></h3>
+    <% youtubelist.each do |youtubelist| %>
+      <div class="youtubeitem"> 
+        <iframe width="320" height="195" src="//www.youtube.com/embed/<%= youtubelist.url.html_safe %>" frameborder="0" allowfullscreen>f</iframe>
+        <br/>
+        <% if logged_in? && current_user == @user %>
+          <%= link_to "Delete", youtubelist_delete_path(youtubelist), class: 'btn btn-default btn-xs' %>
+        <% end %>
+      </div>
     <% end %>
   </div>
 <% end %>

@@ -21,13 +21,7 @@
     <%#= link_to 'New video', new_youtubelist_path %>
   <% end %>
 </div>
-
 <div class="col-md-6">
-
-  <ul class="nav nav-tabs" style="border-bottom: 1px solid #FFFFFF;">
-   <li role="presentation"><a href="#">Random</a></li>
-    <li role="presentation"><a href="#">Music</a></li>
-     <li role="presentation"><a href="#">Tutorials</a></li>
-   </ul>
-   <%= render 'site/youtubelist'%>
+  <%= render 'tabs' %>
+  <%= render 'site/youtubelist'%>
 </div>

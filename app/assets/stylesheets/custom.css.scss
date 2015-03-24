@@ -10,11 +10,15 @@
 }
 /* move submit youtube url button */
 button.btn.btn-default{
-	position: relative;
-  top: -44px;
-  left: 199px;
+	//position: relative;
+  //top: -44px;
+  //left: 199px;
 }
 
 .navbar {
   border-radius: 0px
+}
+
+.category{
+  display:none;
 }

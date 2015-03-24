@@ -94,6 +94,6 @@ class YoutubelistsController < ApplicationController
     video_id = params[:youtubelist]['url'][/v=([^&]+)/, 1]
     params[:youtubelist]['url'] = video_id
 
-    params.require(:youtubelist).permit(:title, :url)
+    params.require(:youtubelist).permit(:url, :category)
   end
 end
