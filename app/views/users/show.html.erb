@@ -1,27 +1,27 @@
-<div class="col-md-5">
-  <h3>  
-    <%= gravatar_for @user %>
-    <%= @user.name %>
-  </h3>
+<div class="col-md-5 shadowbox white" style="margin: 0 5px 5px 0">
+    <h3>  
+      <%= gravatar_for @user %>
+      <%= @user.name %>
+    </h3>
 
-  <% if logged_in? && current_user == @user %>
-    <%= link_to 'Edit profile', edit_user_path(current_user) %> |
-    <%= link_to "Logout", logout_path %>
+    <% if logged_in? && current_user == @user %>
+      <%= link_to 'Edit profile', edit_user_path(current_user) %> |
+      <%= link_to "Logout", logout_path %>
 
-    <br />
-    <br />
-    <br />
-
-
+      <br />
+      <br />
+      <br />
 
 
-    <%= render 'new_video_form' %>
 
 
-    <%#= link_to 'New video', new_youtubelist_path %>
-  <% end %>
+      <%= render 'new_video_form' %>
+
+
+      <%#= link_to 'New video', new_youtubelist_path %>
+    <% end %>
 </div>
-<div class="col-md-6">
+<div class="col-md-6 shadowbox whit white">
   <%= render 'tabs' %>
   <%= render 'site/youtubelist'%>
 </div>
