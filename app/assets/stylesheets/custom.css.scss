@@ -19,6 +19,13 @@ button.btn.btn-default{
   border-radius: 0px
 }
 
+.category{
+  display:none;
+}
+.category:first-of-type{
+  display:inline;
+}
+
 
 .shadowbox{
   box-shadow: 2px 2px 3px #666666;
