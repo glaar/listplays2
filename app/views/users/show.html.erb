@@ -4,6 +4,11 @@
       <%= @user.name %>
     </h3>
 
+    <% if @user.name == "Glenn Aarøen" %>
+      <%= link_to "Check out my AI blog!", "http://neurolab.herokuapp.com" %>
+      <br/>
+    <%end%>
+
     <% if logged_in? && current_user == @user %>
 
       <br />
